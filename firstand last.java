@@ -1,16 +1,20 @@
 class Solution {
-    public int removeElement(int[] nums, int val) {
-        int i=0;
-        int k=0;
+    public int[] searchRange(int[] nums, int target) {
+        int i,start=-1,end=-1;
         for(i=0;i<nums.length;i++)
         {
-            if(val!=nums[i])
+            if(target==nums[i])
             {
-                nums[k]=nums[i];
-                k++;
-            }
+                if(start==-1)
+                {
+                    start=i;
+                }
+                    end=i;
+            }    
+       
         }
-    return k;
-    }
+        return new int[]{start,end};
 
+        
+    }
 }
